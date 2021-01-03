@@ -1,3 +1,12 @@
+# code
+
+https://www.twilio.com/blog/multi-room-web-chat-flask-react-twilio-conversations
+
+install in venv 
+mkdir api
+python3 -m venv api/venv
+api\venv\Scripts\pip install flask twilio python-dotenv
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
