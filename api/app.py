@@ -95,5 +95,5 @@ def login():
     return {
         'chatrooms': [[conversation.friendly_name, conversation.sid]
                       for conversation in conversations],
-        'token': token.to_jwt().decode(),
+        'token': token.to_jwt()#.decode(),
     }
