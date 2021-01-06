@@ -10,7 +10,7 @@ function ChatRooms() {
   }
 
   return (
-    <div id="chatrooms">
+    <div ClassName = "p-3 mb-2 bg-light text-dark" >
       {chatData.user.chatrooms.map(chatroom => {
         let className = 'chatroom';
         if (chatData.selectedChatroom && chatData.selectedChatroom.sid === chatroom[1]) {

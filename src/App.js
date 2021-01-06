@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Twilio Conversations API Demo</h1>
+      <h2 className="text-primary" >Twilio Conversations API Demo</h2>
       <ChatContext.Provider value={chatData}>
         <LoginForm />
         {chatData.user.username !== null &&

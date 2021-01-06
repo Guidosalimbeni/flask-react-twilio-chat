@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChatContext } from './App.js';
 
+
 function LoginForm() {
   const chatData  = React.useContext(ChatContext);
   const userInput = React.useRef();
@@ -16,13 +17,16 @@ function LoginForm() {
 
   if (chatData.user.username === null) {
     return (
-      <div id="login">
+      <div className = "mb-3" id="login">
         <div>
-          Username:&nbsp;
-          <input type="text" ref={userInput} onKeyUp={login} autoFocus />
+          
+          <label for="exampleFormControlInput1" class="form-label">Username</label>
+          <input className="form-control" type="text" ref={userInput} onKeyUp={login} autoFocus />
           &nbsp;
-          <button onClick={login}>Login</button>
+          <div class="col-auto">
+          <button   type="submit" class="btn btn-primary mb-3"onClick={login}>Login</button>
           {error && <>&nbsp;Login error, please try again.</>}
+          </div>
         </div>
       </div>
     );
@@ -32,7 +36,9 @@ function LoginForm() {
       <div id="login">
         <div>
           Username: <b>{ chatData.user.username }</b>&nbsp;
-          <button onClick={logout}>Logout</button>
+        </div>
+        <div>
+        <button  type="submit" class="btn btn-primary mb-3" onClick={logout}>Logout</button>
         </div>
       </div>
     );
